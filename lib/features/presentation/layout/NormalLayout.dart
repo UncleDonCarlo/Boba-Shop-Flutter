@@ -18,8 +18,11 @@ class NormalLayout extends StatelessWidget {
             DrawerHeader(
               decoration: BoxDecoration(color: Colors.blueAccent),
               child: Text(
-                'Drawer Header',
-                style: TextStyle(color: Colors.white, fontSize: 24),
+                'Drawer Dons Header',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
               ),
             ),
             ListTile(
