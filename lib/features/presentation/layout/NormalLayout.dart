@@ -46,37 +46,34 @@ class NormalLayout extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Action to perform when the button is pressed
-        },
-        child: Icon(Icons.add),
-        tooltip: 'Add',
-      ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
               icon: Icon(Icons.home),
+              iconSize: MediaQuery.of(context).size.width * 0.08,
               onPressed: () {
                 // Action to perform when the home icon is pressed
               },
             ),
             IconButton(
               icon: Icon(Icons.search),
+              iconSize: MediaQuery.of(context).size.width * 0.08,
               onPressed: () {
                 // Action to perform when the search icon is pressed
               },
             ),
             IconButton(
               icon: Icon(Icons.notifications),
+              iconSize: MediaQuery.of(context).size.width * 0.08,
               onPressed: () {
                 // Action to perform when the notifications icon is pressed
               },
             ),
             IconButton(
               icon: Icon(Icons.account_circle),
+              iconSize: MediaQuery.of(context).size.width * 0.08,
               onPressed: () {
                 // Action to perform when the account icon is pressed
               },
