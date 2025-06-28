@@ -18,7 +18,7 @@ class NormalLayout extends StatelessWidget {
             DrawerHeader(
               decoration: BoxDecoration(color: Colors.blueAccent),
               child: Text(
-                'Drawer Header',
+                'Drawer Dons Header',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
