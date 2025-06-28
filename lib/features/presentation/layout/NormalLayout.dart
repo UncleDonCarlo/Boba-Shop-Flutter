@@ -10,23 +10,16 @@ class NormalLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Header(),
-      body: Center(
-        child: Home(),
-      ),
+      body: Center(child: Home()),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blueAccent,
-              ),
+              decoration: BoxDecoration(color: Colors.blueAccent),
               child: Text(
                 'Drawer Header',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
+                style: TextStyle(color: Colors.white, fontSize: 24),
               ),
             ),
             ListTile(
@@ -46,39 +39,43 @@ class NormalLayout extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(
-              icon: Icon(Icons.home),
-              iconSize: MediaQuery.of(context).size.width * 0.08,
-              onPressed: () {
-                // Action to perform when the home icon is pressed
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.search),
-              iconSize: MediaQuery.of(context).size.width * 0.08,
-              onPressed: () {
-                // Action to perform when the search icon is pressed
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.notifications),
-              iconSize: MediaQuery.of(context).size.width * 0.08,
-              onPressed: () {
-                // Action to perform when the notifications icon is pressed
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.account_circle),
-              iconSize: MediaQuery.of(context).size.width * 0.08,
-              onPressed: () {
-                // Action to perform when the account icon is pressed
-              },
-            ),
-          ],
+      bottomNavigationBar: MediaQuery.removePadding(
+        context: context,
+        removeBottom: true,
+        child: BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.home),
+                iconSize: MediaQuery.of(context).size.width * 0.08,
+                onPressed: () {
+                  // Action to perform when the home icon is pressed
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.search),
+                iconSize: MediaQuery.of(context).size.width * 0.08,
+                onPressed: () {
+                  // Action to perform when the search icon is pressed
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.notifications),
+                iconSize: MediaQuery.of(context).size.width * 0.08,
+                onPressed: () {
+                  // Action to perform when the notifications icon is pressed
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.account_circle),
+                iconSize: MediaQuery.of(context).size.width * 0.08,
+                onPressed: () {
+                  // Action to perform when the account icon is pressed
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
