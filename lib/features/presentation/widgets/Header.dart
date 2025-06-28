@@ -18,7 +18,14 @@ class Header extends StatelessWidget implements PreferredSizeWidget{
       leading: Icon(Icons.menu),
       leadingWidth: 50,
       actionsIconTheme: IconThemeData(color: Colors.white, size: 30),
-      actions: [],
+      actions: [
+        IconButton(
+          icon: Icon(Icons.notifications),
+          onPressed: () {
+            // Action for notifications button
+          },
+        ),
+      ],
     );
   }
 
