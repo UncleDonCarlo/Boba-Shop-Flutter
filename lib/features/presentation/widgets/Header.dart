@@ -15,14 +15,23 @@ class Header extends StatelessWidget implements PreferredSizeWidget{
       ),
       backgroundColor: Colors.blueAccent,
       centerTitle: true,
-      leading: Icon(Icons.menu),
+      leading: IconButton(
+        icon: Icon(
+          Icons.menu,
+          color: Colors.white,
+          size: 30,
+        ),
+        onPressed: () {
+          Scaffold.of(context).openDrawer(); // Open the drawer when the menu icon is pressed
+        },
+      ),
       leadingWidth: 50,
       actionsIconTheme: IconThemeData(color: Colors.white, size: 30),
       actions: [
         IconButton(
-          icon: Icon(Icons.notifications),
+          icon: Icon(Icons.search),
           onPressed: () {
-            // Action for notifications button
+            // Action to perform when the search icon is pressed
           },
         ),
       ],
